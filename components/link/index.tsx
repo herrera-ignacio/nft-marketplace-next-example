@@ -9,14 +9,12 @@ interface LinkProps {
   className: string;
 }
 
-const ActiveLink: React.FC<LinkProps> = ({children, ...props}) => {
+const ActiveLink: React.FC<LinkProps> = ({children, activeClass, ...props}) => {
   const { pathname } = useRouter();
   let className = props.className;
 
   if (pathname === props.href) {
-    console.log(props.href);
-    console.log(pathname);
-    className = `${className} text-indigo-400 ${props.activeClass}`;
+    className = `${className} text-indigo-400 ${activeClass}`;
   } else {
     className = `${className} text-gray-100`;
   }
