@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Create', href: '/nft/create', current: false }
 ];
 
-export default function Example() {
+export default function Navbar() {
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }: { open: boolean }) => (
