@@ -4,7 +4,7 @@ import type { NextPage } from 'next';
 import BaseLayout from '@/components/layout/BaseLayout';
 
 import nfts from "../content/meta.json";
-import { NftMeta } from '../types/nft';
+import { NftMeta } from '@/types/nft';
 
 const tabs = [
   { name: 'Your Collection', href: '#', current: true },
