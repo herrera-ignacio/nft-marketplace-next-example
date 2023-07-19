@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 
-import type { NextPage } from 'next';
-import { useState } from 'react';
-import BaseLayout from '@/components/layout/BaseLayout';
-import { Switch } from '@headlessui/react';
-import Link from 'next/link';
+import type { NextPage } from "next";
+import { useState } from "react";
+import BaseLayout from "@/components/layout/BaseLayout";
+import { Switch } from "@headlessui/react";
+import Link from "next/link";
 
 const ATTRIBUTES = ["health", "attack", "speed"];
 
@@ -23,13 +23,13 @@ const NftCreate: NextPage = () => {
               <Switch
                 checked={hasURI}
                 onChange={() => setHasURI(!hasURI)}
-                className={`${hasURI ? 'bg-indigo-900' : 'bg-indigo-700'}
+                className={`${hasURI ? "bg-indigo-900" : "bg-indigo-700"}
                   relative inline-flex flex-shrink-0 h-[28px] w-[64px] border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
               >
                 <span className="sr-only">Use setting</span>
                 <span
                   aria-hidden="true"
-                  className={`${hasURI ? 'translate-x-9' : 'translate-x-0'}
+                  className={`${hasURI ? "translate-x-9" : "translate-x-0"}
                     pointer-events-none inline-block h-[24px] w-[24px] rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200`}
                 />
               </Switch>
@@ -147,7 +147,7 @@ const NftCreate: NextPage = () => {
                         rows={3}
                         className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                         placeholder="Some nft description..."
-                        defaultValue={''}
+                        defaultValue={""}
                       />
                     </div>
                     <p className="mt-2 text-sm text-gray-500">

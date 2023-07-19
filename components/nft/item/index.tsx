@@ -10,7 +10,7 @@ const NftItem: React.FC<NftItemProps> = ({item}) => {
     <>
       <div className="flex-shrink-0">
         <img
-          className={`h-full w-full object-cover`}
+          className={"h-full w-full object-cover"}
           src={item.image}
           alt="New NFT"
         />

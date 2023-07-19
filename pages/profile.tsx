@@ -1,17 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 
-import type { NextPage } from 'next';
-import BaseLayout from '@/components/layout/BaseLayout';
+import type { NextPage } from "next";
+import BaseLayout from "@/components/layout/BaseLayout";
 
 import nfts from "../content/meta.json";
-import { NftMeta } from '@/types/nft';
+import { NftMeta } from "@/types/nft";
 
 const tabs = [
-  { name: 'Your Collection', href: '#', current: true },
+  { name: "Your Collection", href: "#", current: true },
 ];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 const Profile: NextPage = () => {
@@ -33,12 +33,12 @@ const Profile: NextPage = () => {
                           <a
                             key={tab.name}
                             href={tab.href}
-                            aria-current={tab.current ? 'page' : undefined}
+                            aria-current={tab.current ? "page" : undefined}
                             className={classNames(
                               tab.current
-                                ? 'border-indigo-500 text-indigo-600'
-                                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
-                              'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
+                                ? "border-indigo-500 text-indigo-600"
+                                : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300",
+                              "whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
                             )}
                           >
                             {tab.name}
@@ -62,17 +62,17 @@ const Profile: NextPage = () => {
                         <div
                           className={classNames(
                             true
-                              ? 'ring-2 ring-offset-2 ring-indigo-500'
-                              : 'focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500',
-                            'group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 overflow-hidden'
+                              ? "ring-2 ring-offset-2 ring-indigo-500"
+                              : "focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500",
+                            "group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 overflow-hidden"
                           )}
                         >
                           <img
                             src={nft.image}
                             alt=""
                             className={classNames(
-                              true ? '' : 'group-hover:opacity-75',
-                              'object-cover pointer-events-none'
+                              true ? "" : "group-hover:opacity-75",
+                              "object-cover pointer-events-none"
                             )}
                           />
                           <button type="button" className="absolute inset-0 focus:outline-none">
