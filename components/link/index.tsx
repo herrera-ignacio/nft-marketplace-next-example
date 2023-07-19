@@ -9,7 +9,7 @@ interface LinkProps {
   className: string;
 }
 
-const ActiveLink: React.FC<LinkProps> = ({children, activeClass, ...props}) => {
+const ActiveLink: React.FC<LinkProps> = ({ children, activeClass, ...props }) => {
   const { pathname } = useRouter();
   let className = props.className;
 

@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import Navbar from "../navbar";
 
-const BaseLayout: FunctionComponent<any> = ({children}) => {
+const BaseLayout: FunctionComponent<any> = ({ children }) => {
   return (
     <>
       <Navbar />

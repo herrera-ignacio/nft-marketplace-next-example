@@ -5,7 +5,7 @@ interface NftItemProps {
   item: NftMeta;
 }
 
-const NftItem: React.FC<NftItemProps> = ({item}) => {
+const NftItem: React.FC<NftItemProps> = ({ item }) => {
   return (
     <>
       <div className="flex-shrink-0">
