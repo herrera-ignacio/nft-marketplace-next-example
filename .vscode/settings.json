@@ -10,5 +10,7 @@
   "cSpell.words": [
     "headlessui",
     "tailwindcss"
-  ]
+  ],
+  "CodeGPT.maxTokens": 500,
+  "CodeGPT.model": "text-davinci-003"
 }
