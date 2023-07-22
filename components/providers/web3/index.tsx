@@ -1,7 +1,7 @@
 import { FunctionComponent, createContext, useContext, useEffect, useState } from "react";
 import { MetaMaskInpageProvider } from "@metamask/providers";
 import { Contract, BrowserProvider } from "ethers";
-import { browser } from "process";
+import { loadContract } from "./utils";
 
 declare global {
   interface Window {
@@ -25,11 +25,19 @@ const Web3Provider: FunctionComponent<{ children: any }> = ({ children }) => {
   const [web3Api, setWeb3Api] = useState<Web3State>(createDefaultState());
 
   useEffect(() => {
-    setWeb3Api({
-      ethereum: window.ethereum, // Injected by metamask.
-      provider: new BrowserProvider(window.ethereum),
-      isLoading: false
-    });
+    async function initWeb3() {
+      const provider = new BrowserProvider(window.ethereum);
+      const contract = await loadContract("NftMarket", provider);
+
+      setWeb3Api({
+        contract,
+        ethereum: window.ethereum, // Injected by metamask.
+        isLoading: false,
+        provider
+      });
+    }
+
+    initWeb3();
   }, []);
 
   if (web3Api.provider) {

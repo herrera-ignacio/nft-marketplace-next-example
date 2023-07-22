@@ -8,17 +8,25 @@ import { useWeb3 } from "@/components/providers/web3";
 import { useEffect } from "react";
 
 const Home: NextPage = () => {
-  const { ethereum, provider, isLoading, contract } = useWeb3();
-  // console.log("Ethereum", ethereum);
+  const { provider, contract } = useWeb3();
 
   useEffect(() => {
     const getAccounts = async () => {
       const accounts = await provider?.listAccounts();
-      console.log(accounts);
+      console.log("Accounts", accounts);
     };
 
     getAccounts();
   }, [provider]);
+
+  const getNftInfo = async () => {
+    console.log("contract.name", await contract?.name());
+    console.log("contract.symbol", await contract?.symbol());
+  };
+
+  if (contract) {
+    getNftInfo();
+  }
   
   return (
     <BaseLayout>
